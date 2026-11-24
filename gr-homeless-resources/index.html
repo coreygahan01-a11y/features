@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GR Homeless Resources — Grand Rapids Housing &amp; Community Support</title>
+  <meta
+    name="description"
+    content="Accessible community directory for emergency shelter, food, healthcare, and housing support in Grand Rapids, Michigan."
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="crisis-banner" role="region" aria-label="Immediate help">
+    <div class="container crisis-inner">
+      <p>
+        <strong>Need immediate help?</strong>
+        Call <a href="tel:211"><strong>211</strong></a> (24/7 local shelter &amp; food referrals) &bull;
+        Call or text <a href="tel:988"><strong>988</strong></a> (Suicide &amp; Crisis Lifeline) &bull;
+        Call <a href="tel:911"><strong>911</strong></a> for life-threatening emergencies.
+      </p>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <p class="eyebrow">Grand Rapids &amp; Kent County, MI</p>
+      <h1>GR Homeless &amp; Housing Resources</h1>
+      <p class="lead">
+        A fast, mobile-friendly, and printable directory connecting neighbors experiencing
+        homelessness or housing instability with local support.
+      </p>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <section class="controls" aria-labelledby="filter-heading">
+      <h2 id="filter-heading" class="visually-hidden">Search and filter resources</h2>
+
+      <div class="search-row">
+        <label for="search-input" class="search-label">Search resources</label>
+        <input
+          id="search-input"
+          type="search"
+          placeholder="Search by keyword (e.g., shelter, food, clinic, youth, veterans)..."
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="filter-buttons" role="group" aria-label="Filter by category">
+        <button type="button" class="filter-btn active" data-category="all" aria-pressed="true">
+          All Resources
+        </button>
+        <button type="button" class="filter-btn" data-category="shelter" aria-pressed="false">
+          Shelter &amp; Housing
+        </button>
+        <button type="button" class="filter-btn" data-category="food" aria-pressed="false">
+          Food &amp; Meals
+        </button>
+        <button type="button" class="filter-btn" data-category="health" aria-pressed="false">
+          Health &amp; Crisis
+        </button>
+        <button type="button" class="filter-btn" data-category="services" aria-pressed="false">
+          Day Centers &amp; Aid
+        </button>
+        <button type="button" class="filter-btn" data-category="help" aria-pressed="false">
+          Volunteer &amp; Donate
+        </button>
+      </div>
+
+      <p id="results-status" class="results-status" role="status" aria-live="polite">
+        Showing all 8 resources.
+      </p>
+    </section>
+
+    <section class="resource-grid" id="resource-grid" aria-label="Resource directory">
+      <article class="card" data-category="shelter" data-keywords="211 coordinated entry shelter housing intake kent county emergency">
+        <span class="badge">Shelter &amp; Housing</span>
+        <h3>Michigan 2-1-1 (Housing &amp; Shelter Intake)</h3>
+        <p>
+          24/7 free, confidential referrals for emergency shelter beds, warming/cooling centers,
+          eviction prevention, and utility assistance across Kent County.
+        </p>
+        <ul class="card-meta">
+          <li><strong>Phone:</strong> <a href="tel:211">2-1-1</a> or <a href="tel:18008871107">1-800-887-1107</a></li>
+          <li><strong>Website:</strong> <a href="https://mi211.org/" target="_blank" rel="noopener noreferrer">mi211.org</a></li>
+        </ul>
+      </article>
+
+      <article class="card" data-category="shelter" data-keywords="emergency shelter family single adults overnight beds grand rapids">
+        <span class="badge">Shelter &amp; Housing</span>
+        <h3>Local Emergency Shelters &amp; Outreach</h3>
+        <p>
+          Connect through 2-1-1 or Kent County Homeless Continuum of Care (Coalition to End
+          Homelessness) for current bed availability, family shelter, and street outreach teams.
+        </p>
+        <ul class="card-meta">
+          <li><strong>Directory:</strong> <a href="https://grandrapidsarea.org/" target="_blank" rel="noopener noreferrer">Coalition to End Homelessness</a></li>
+          <li><strong>Intake:</strong> Call <a href="tel:211">2-1-1</a> before traveling when possible</li>
+        </ul>
+      </article>
+
+      <article class="card" data-category="food" data-keywords="food pantry meals groceries soup kitchen nutrition grand rapids">
+        <span class="badge">Food &amp; Meals</span>
+        <h3>Community Meals &amp; Food Pantries</h3>
+        <p>
+          Daily hot meals, mobile food pantries, and emergency grocery boxes are available across
+          Grand Rapids neighborhoods.
+        </p>
+        <ul class="card-meta">
+          <li><strong>Food Locator:</strong> <a href="https://www.feedwm.org/findfood/" target="_blank" rel="noopener noreferrer">Feeding America West Michigan</a></li>
+          <li><strong>Phone:</strong> Call <a href="tel:211">2-1-1</a> for today&rsquo;s meal schedule</li>
+        </ul>
+      </article>
+
+      <article class="card" data-category="health" data-keywords="mental health crisis lifeline 988 counseling substance recovery">
+        <span class="badge">Health &amp; Crisis</span>
+        <h3>988 Suicide &amp; Crisis Lifeline</h3>
+        <p>
+          Free, confidential 24/7 mental health, emotional distress, and substance-use crisis
+          support by call or text in English and Spanish.
+        </p>
+        <ul class="card-meta">
+          <li><strong>Call or Text:</strong> <a href="tel:988">988</a></li>
+          <li><strong>Website:</strong> <a href="https://988lifeline.org/" target="_blank" rel="noopener noreferrer">988lifeline.org</a></li>
+        </ul>
+      </article>
+
+      <article class="card" data-category="health" data-keywords="medical clinic doctor dental healthcare uninsured low cost">
+        <span class="badge">Health &amp; Crisis</span>
+        <h3>Free &amp; Low-Cost Medical Clinics</h3>
+        <p>
+          Walk-in and sliding-scale primary care, prescriptions, dental, and behavioral health
+          services for uninsured or unhoused community members.
+        </p>
+        <ul class="card-meta">
+          <li><strong>Finder:</strong> <a href="https://findahealthcenter.hrsa.gov/" target="_blank" rel="noopener noreferrer">HRSA Health Center Finder</a></li>
+          <li><strong>Tip:</strong> Ask for a community health worker for ID/Medicaid help</li>
+        </ul>
+      </article>
+
+      <article class="card" data-category="services" data-keywords="day center showers laundry mail id documents transportation">
+        <span class="badge">Day Centers &amp; Aid</span>
+        <h3>Day Centers, Mail, IDs &amp; Showers</h3>
+        <p>
+          Daytime drop-in spaces offering restrooms, showers, laundry, phone charging, mail
+          pickup, and help replacing Michigan state IDs or birth certificates.
+        </p>
+        <ul class="card-meta">
+          <li><strong>Referrals:</strong> Call <a href="tel:211">2-1-1</a> for current drop-in hours</li>
+          <li><strong>Note:</strong> Update this card with your preferred local partner hours</li>
+        </ul>
+      </article>
+
+      <article class="card" data-category="services" data-keywords="veterans va housing support employment legal aid">
+        <span class="badge">Day Centers &amp; Aid</span>
+        <h3>Veterans Housing &amp; Legal Aid</h3>
+        <p>
+          Dedicated housing navigation, benefits assistance, and free civil legal aid for
+          veterans and residents facing eviction or record barriers.
+        </p>
+        <ul class="card-meta">
+          <li><strong>VA Homeless Line:</strong> <a href="tel:18774243838">1-877-424-3838</a> (24/7)</li>
+          <li><strong>Legal Help:</strong> <a href="https://michiganlegalhelp.org/" target="_blank" rel="noopener noreferrer">michiganlegalhelp.org</a></li>
+        </ul>
+      </article>
+
+      <article class="card" data-category="help" data-keywords="volunteer donate clothing socks hygiene kits winter gear">
+        <span class="badge">Volunteer &amp; Donate</span>
+        <h3>How Neighbors Can Help</h3>
+        <p>
+          Support Grand Rapids outreach groups by donating seasonal gear (coats, socks, hygiene
+          kits), volunteering at meal programs, or funding rapid re-housing efforts.
+        </p>
+        <ul class="card-meta">
+          <li><strong>Volunteer Hub:</strong> <a href="https://www.hwmuw.org/" target="_blank" rel="noopener noreferrer">Heart of West Michigan United Way</a></li>
+          <li><strong>Action:</strong> Check current most-needed items before dropping off</li>
+        </ul>
+      </article>
+    </section>
+
+    <div id="empty-state" class="empty-state" hidden>
+      <p>No resources matched your search.</p>
+      <button type="button" id="reset-filters" class="reset-btn">Show all resources</button>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        GR Homeless Resources &bull; Built for fast access on mobile devices and easy printing.
+        Always verify hours directly when possible.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
