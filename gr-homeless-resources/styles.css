@@ -1,0 +1,279 @@
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: #cbd5e1;
+  --primary: #0f4c81;
+  --primary-dark: #0a355c;
+  --accent-bg: #e0f2fe;
+  --crisis-bg: #7f1d1d;
+  --crisis-text: #ffffff;
+  --focus: #f59e0b;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.container {
+  width: min(1080px, 100% - 2rem);
+  margin-inline: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--text);
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  z-index: 100;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+  outline: 3px solid var(--focus);
+}
+
+a {
+  color: var(--primary);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.crisis-banner {
+  background: var(--crisis-bg);
+  color: var(--crisis-text);
+  padding: 0.75rem 0;
+  font-size: 0.95rem;
+}
+
+.crisis-inner p {
+  margin: 0;
+}
+
+.crisis-banner a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.site-header {
+  background: var(--primary);
+  color: #ffffff;
+  padding: 2.5rem 0;
+}
+
+.eyebrow {
+  margin: 0 0 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.site-header h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.2;
+}
+
+.lead {
+  margin: 0;
+  max-width: 65ch;
+  opacity: 0.95;
+}
+
+main {
+  padding: 2rem 0 3rem;
+}
+
+.controls {
+  margin-bottom: 1.75rem;
+}
+
+.search-row {
+  margin-bottom: 1rem;
+}
+
+.search-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+#search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.filter-btn {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.925rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  border-color: var(--primary);
+}
+
+.filter-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+}
+
+.results-status {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.card[hidden] {
+  display: none;
+}
+
+.badge {
+  align-self: flex-start;
+  background: var(--accent-bg);
+  color: var(--primary-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.card-meta {
+  margin: 0.25rem 0 0;
+  padding-left: 1.1rem;
+  font-size: 0.95rem;
+}
+
+.card-meta li + li {
+  margin-top: 0.25rem;
+}
+
+.empty-state {
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.reset-btn {
+  margin-top: 0.5rem;
+  border: none;
+  background: var(--primary);
+  color: #ffffff;
+  padding: 0.6rem 1.1rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media print {
+  .controls,
+  .skip-link {
+    display: none;
+  }
+
+  .crisis-banner,
+  .site-header {
+    background: #ffffff;
+    color: #000000;
+    border-bottom: 2px solid #000000;
+  }
+
+  .crisis-banner a,
+  a {
+    color: #000000;
+  }
+
+  .card {
+    break-inside: avoid;
+  }
+}
